@@ -5,11 +5,12 @@ import {
   Row,
   Col,
   Button,
-  InputGroup,
-  FormControl,
-  FloatingLabel,
+  // InputGroup,
+  // FormControl,
+  // FloatingLabel,
 } from "react-bootstrap";
 import styles from "./formComp.css";
+import DogIcon from "../../images/dog";
 function FormComp() {
   const [name, setName] = useState("");
   const handleNameChange = (e) => {
@@ -29,35 +30,52 @@ function FormComp() {
   };
 
   return (
-    <div className="formComp-holder">
+    <div className="container-fluid formComp-holder">
       <Form>
         <Row>
-          <Col sm={8}>
-            <Form.Control
-              type="text"
-              placeholder="Name this dog:"
-              aria-label="Enter name"
-              aria-describedby="basic-addon2"
-              onChange={handleNameChange}
-              value={name}
-            />
+          <Col>
+            <Row>
+              <Col>
+                <Form.Control
+                  type="text"
+                  placeholder="Name this dog:"
+                  aria-label="Enter name"
+                  aria-describedby="basic-addon2"
+                  onChange={handleNameChange}
+                  value={name}
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Form.Control
+                  type="color"
+                  class="form-control form-control-color"
+                  id="pupColorInput"
+                  title="Choose your color"
+                  aria-label="Choose Color"
+                  onChange={handleColorChange}
+                  value={color}
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Button
+                  variant="primary"
+                  id="button-addon2"
+                  onClick={createPup}
+                >
+                  Add to list
+                </Button>
+              </Col>
+            </Row>
           </Col>
-          <Col sm={12}>
-            <Form.Control
-              type="color"
-              class="form-control form-control-color"
-              id="pupColorInput"
-              title="Choose your color"
-              aria-label="Choose Color"
-              onChange={handleColorChange}
-              value={color}
-            />
+          <Col>
+            <DogIcon fill={color} />
           </Col>
         </Row>
       </Form>
-      <Button variant="primary" id="button-addon2" onClick={createPup}>
-        Add to list
-      </Button>
     </div>
   );
 }
