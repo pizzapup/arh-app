@@ -21,9 +21,9 @@ function Pup({ pup }) {
     <div className="to-do-holder">
       {/* <h2 className={pup.complete ? "complete" : "incomplete"}>{pup.title}</h2> */}
       <Card style={{ width: "18rem" }}>
-        <DogIcon />
+        <DogIcon fill={pup.color} />
         <Card.Body>
-          <Card.Title>{pup.title}</Card.Title>
+          <Card.Title>{pup.name}</Card.Title>
           <Card.Text>The dog is this color {pup.color}</Card.Text>
           <Button variant="primary">Go somewhere</Button>
         </Card.Body>

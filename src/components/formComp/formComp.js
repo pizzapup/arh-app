@@ -34,6 +34,7 @@ function FormComp() {
         <Row>
           <Col sm={8}>
             <Form.Control
+              type="text"
               placeholder="Name this dog:"
               aria-label="Enter name"
               aria-describedby="basic-addon2"
@@ -45,10 +46,11 @@ function FormComp() {
             <Form.Control
               type="color"
               class="form-control form-control-color"
-              id="exampleColorInput"
-              value={color}
+              id="pupColorInput"
               title="Choose your color"
+              aria-label="Choose Color"
               onChange={handleColorChange}
+              value={color}
             />
           </Col>
         </Row>
