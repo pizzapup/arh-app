@@ -2,7 +2,15 @@
 import React from "react";
 import firebase from "../../utilities/firebase";
 import styles from "./toDo.css";
-import { Button, Stack, Form, Card } from "react-bootstrap";
+import {
+  Button,
+  Stack,
+  Form,
+  Card,
+  Container,
+  Row,
+  Col,
+} from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DogIcon from "../../images/dog";
 
@@ -18,7 +26,7 @@ function Pup({ pup }) {
     pupRef.remove();
   };
   return (
-    <div className="to-do-holder">
+    <div className="col">
       {/* <h2 className={pup.complete ? "complete" : "incomplete"}>{pup.title}</h2> */}
       <Card style={{ width: "18rem" }}>
         <DogIcon fill={pup.color} />

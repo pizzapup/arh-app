@@ -1,16 +1,10 @@
 import React, { useState } from "react";
 import firebase from "../../utilities/firebase";
-import {
-  Form,
-  Row,
-  Col,
-  Button,
-  // InputGroup,
-  // FormControl,
-  // FloatingLabel,
-} from "react-bootstrap";
 import styles from "./formComp.css";
 import DogIcon from "../../images/dog";
+import { Form, Row, Col, Button, FormLabel } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 function FormComp() {
   const [name, setName] = useState("");
   const handleNameChange = (e) => {
@@ -30,10 +24,13 @@ function FormComp() {
   };
 
   return (
-    <div className="container-fluid formComp-holder">
+    <div>
       <Form>
-        <Row>
-          <Col>
+        <Row className="flex-sm-row-reverse">
+          <Col sm={12} md={6} className="align-self-center">
+            <DogIcon fill={color} />
+          </Col>
+          <Col sm={12} md={6} className="align-self-center">
             <Row>
               <Col>
                 <Form.Control
@@ -45,34 +42,27 @@ function FormComp() {
                   value={name}
                 />
               </Col>
-            </Row>
-            <Row>
+
               <Col>
-                <Form.Control
-                  type="color"
-                  class="form-control form-control-color"
-                  id="pupColorInput"
-                  title="Choose your color"
-                  aria-label="Choose Color"
-                  onChange={handleColorChange}
-                  value={color}
-                />
+                <FormLabel for="pupColorInput" className="pupColorLabel">
+                  <FontAwesomeIcon icon="paint-roller" />
+                  <Form.Control
+                    type="color"
+                    class="form-control form-control-color"
+                    id="pupColorInput"
+                    title="Choose your color"
+                    aria-label="Choose Color"
+                    onChange={handleColorChange}
+                    value={color}
+                  />
+                </FormLabel>
               </Col>
             </Row>
             <Row>
-              <Col>
-                <Button
-                  variant="primary"
-                  id="button-addon2"
-                  onClick={createPup}
-                >
-                  Add to list
-                </Button>
-              </Col>
+              <Button variant="primary" id="button-addon2" onClick={createPup}>
+                Add to list
+              </Button>
             </Row>
-          </Col>
-          <Col>
-            <DogIcon fill={color} />
           </Col>
         </Row>
       </Form>

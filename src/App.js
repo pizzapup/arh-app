@@ -3,22 +3,32 @@ import FormComp from "./components/formComp/formComp";
 import PupList from "./components/toDoList/toDoList";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import { faKiwiBird, faCarrot } from "@fortawesome/free-solid-svg-icons";
+import {
+  faKiwiBird,
+  faCarrot,
+  faPaintRoller,
+} from "@fortawesome/free-solid-svg-icons";
 import { Container, Row, Col } from "react-bootstrap";
 
-library.add(faKiwiBird, faCarrot);
+library.add(faKiwiBird, faCarrot, faPaintRoller);
 function App() {
   return (
     <div className="App">
       <Container>
-        <Row className="row1">
-          <h1>List in Progress</h1>
+        <Row className="m-2">
+          <Col>
+            <h1>Name this dog:</h1>
+          </Col>
         </Row>
-        <Row className="row2">
-          <FormComp />
+        <Row className="m-2">
+          <Col className="FormComp-wrapper">
+            <FormComp />
+          </Col>
         </Row>
-        <Row className="row3">
-          <PupList />
+        <Row className="m-2">
+          <Col>
+            <PupList />
+          </Col>
         </Row>
       </Container>
     </div>

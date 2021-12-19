@@ -1,2 +1,17 @@
-.formComp-holder {
+.pupColorLabel {
+  background-color: lightblue;
+  positison: absolute;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+  font-size: x-large;
+}
+#pupColorInput {
+  opacity: 0;
+  position: absolute;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
 }

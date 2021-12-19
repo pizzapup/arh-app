@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import firebase from "../../utilities/firebase";
 import Pup from "../toDo/toDo";
+import { Container, Row, Col } from "react-bootstrap";
+
 import styles from "./toDoList.css";
 function PupList() {
   const [pupList, setPupList] = useState();
@@ -18,9 +20,11 @@ function PupList() {
   }, []);
   return (
     <div className="todo-list-holder">
-      {pupList
-        ? pupList.map((pup, index) => <Pup pup={pup} key={index} />)
-        : ""}
+      <Row className="flex-row-reverse">
+        {pupList
+          ? pupList.map((pup, index) => <Pup pup={pup} key={index} />)
+          : ""}
+      </Row>
     </div>
   );
 }
