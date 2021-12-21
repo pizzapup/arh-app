@@ -27,6 +27,12 @@ library.add(
   faUmbrellaBeach
 );
 function App() {
+  console.log(
+    "12-21-21: Working on correcting overlap problem with card buttons. "
+  );
+  console.log(
+    "12-21-21: More project info found in README at https://github.com/pizzapup/arh-app"
+  );
   return (
     <div className="App">
       <Container>

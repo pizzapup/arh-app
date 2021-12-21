@@ -20,7 +20,9 @@
   /* background-color: beige; */
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: cover; */
+  overflow: hidden;
+  background-size: 300%;
 }
 #somewhereDefault {
   /* background-color: pink; */
@@ -34,7 +36,6 @@
 }
 #someCamping {
   opacity: 0.8;
-
   /* background-color: green; */
   background-image: url(../../images/campingClip.jpg);
 }
