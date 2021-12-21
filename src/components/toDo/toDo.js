@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React from "react";
 import firebase from "../../utilities/firebase";
 import styles from "./toDo.css";
 import {
@@ -12,6 +12,7 @@ import {
   Col,
   DropdownButton,
   Dropdown,
+  ButtonGroup,
 } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DogIcon from "../../images/dog";
@@ -39,16 +40,29 @@ function Pup({ pup }) {
           <Card.Title>{pup.name}</Card.Title>
           <Card.Text>The dog is this color {pup.color}</Card.Text>
           <DropdownButton id="dropdown-basic-button" title="Go Somewhere">
-            <Dropdown.Item
-              onClick={goHere}
-              value="somewhereDefault"
-            ></Dropdown.Item>
-            <Dropdown.Item onClick={goHere} value="someForest">
-              Another action
-            </Dropdown.Item>
-            <Dropdown.Item id="somewhere2" onClick={goHere} value="somewhere3">
-              Something else
-            </Dropdown.Item>
+            <Button onClick={goHere} value="somewhereDefault">
+              Nowhere
+            </Button>
+
+            <Button onClick={goHere} value="someSpace">
+              Space <FontAwesomeIcon icon="rocket" />
+            </Button>
+
+            <Button onClick={goHere} value="someWinter">
+              Winter
+              <FontAwesomeIcon icon="snowflake" />
+            </Button>
+
+            <Button onClick={goHere} value="someBeach">
+              Beach
+              <FontAwesomeIcon icon="umbrella-beach" />
+            </Button>
+
+            <Button onClick={goHere} value="someDayForest">
+              Forest
+              <FontAwesomeIcon icon="tree" />
+            </Button>
+
             <Dropdown.Divider />
             <Dropdown.Header>
               *Sending Dog home will delete information from Firebase Database
