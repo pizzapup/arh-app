@@ -19,16 +19,6 @@ import DogIcon from "../../images/dog";
 import DropDownComp from "../dropDownComp/dropDownComp";
 
 function Pup({ pup }) {
-  const goHere = (e) => {
-    const pupRef = firebase.database().ref("arh-final").child(pup.id);
-    pupRef.update({
-      somewhere: e.target.value,
-    });
-  };
-  const deletePup = () => {
-    const pupRef = firebase.database().ref("arh-final").child(pup.id);
-    pupRef.remove();
-  };
   return (
     <div className="col">
       <Card
@@ -39,8 +29,10 @@ function Pup({ pup }) {
         <DogIcon fill={pup.color} />
         <Card.Body className="pupCardText">
           <Card.Title>{pup.name}</Card.Title>
-          <Card.Text>The dog is this color {pup.color}</Card.Text>
-          <DropDownComp />
+          <Card.Text>
+            {pup.name} is this color {pup.color}
+          </Card.Text>
+          <DropDownComp pup={pup} key={pup.id} />
         </Card.Body>
       </Card>
     </div>
