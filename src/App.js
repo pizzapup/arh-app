@@ -7,10 +7,25 @@ import {
   faKiwiBird,
   faCarrot,
   faPaintRoller,
+  faSnowflake,
+  faCampground,
+  faTree,
+  faRocket,
+  faUmbrellaBeach,
 } from "@fortawesome/free-solid-svg-icons";
 import { Container, Row, Col } from "react-bootstrap";
+import { far } from "@fortawesome/free-regular-svg-icons";
 
-library.add(faKiwiBird, faCarrot, faPaintRoller);
+library.add(
+  faKiwiBird,
+  faCarrot,
+  faPaintRoller,
+  faSnowflake,
+  faCampground,
+  faTree,
+  faRocket,
+  faUmbrellaBeach
+);
 function App() {
   return (
     <div className="App">

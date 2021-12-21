@@ -19,6 +19,7 @@ function FormComp() {
     const pup = {
       name,
       color,
+      somewhere: "somewhereDefault",
     };
     pupRef.push(pup);
   };
@@ -44,11 +45,11 @@ function FormComp() {
               </Col>
 
               <Col>
-                <FormLabel for="pupColorInput" className="pupColorLabel">
+                <FormLabel className="pupColorLabel">
                   <FontAwesomeIcon icon="paint-roller" />
                   <Form.Control
                     type="color"
-                    class="form-control form-control-color"
+                    className="form-control form-control-color"
                     id="pupColorInput"
                     title="Choose your color"
                     aria-label="Choose Color"

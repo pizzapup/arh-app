@@ -16,3 +16,41 @@
 .todo-btn {
   /*  */
 }
+.pupcardbody {
+  /* background-color: beige; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#somewhereDefault {
+  /* background-color: pink; */
+  background-color: white;
+}
+#someBeach {
+  /* background-color: blue; */
+  background-image: url(../../images/beach.jpg);
+}
+#someCamping {
+  /* background-color: green; */
+  background-image: url(../../images/campingClip.jpg);
+}
+#someDayForest {
+  /* background-color: green; */
+  background-image: url(../../images/campingClip.jpg);
+}
+#someSunsetForest {
+  /* background-color: green; */
+  background-image: url(../../images/campingClip.jpg);
+}
+#someSpace {
+  /* background-color: green; */
+  background-image: url(../../images/campingClip.jpg);
+}
+#someWinter {
+  /* background-color: green; */
+  background-image: url(../../images/campingClip.jpg);
+}
+#someWoods {
+  /* background-color: green; */
+  background-image: url(../../images/campingClip.jpg);
+}

@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import firebase from "../../utilities/firebase";
 import styles from "./toDo.css";
 import {
@@ -10,15 +10,17 @@ import {
   Container,
   Row,
   Col,
+  DropdownButton,
+  Dropdown,
 } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DogIcon from "../../images/dog";
 
 function Pup({ pup }) {
-  const completePup = () => {
+  const goHere = (e) => {
     const pupRef = firebase.database().ref("arh-final").child(pup.id);
     pupRef.update({
-      complete: !pup.complete,
+      somewhere: e.target.value,
     });
   };
   const deletePup = () => {
@@ -27,37 +29,34 @@ function Pup({ pup }) {
   };
   return (
     <div className="col">
-      {/* <h2 className={pup.complete ? "complete" : "incomplete"}>{pup.title}</h2> */}
-      <Card style={{ width: "18rem" }}>
+      <Card
+        className="pupcardbody"
+        id={pup.somewhere}
+        style={{ width: "18rem" }}
+      >
         <DogIcon fill={pup.color} />
         <Card.Body>
           <Card.Title>{pup.name}</Card.Title>
           <Card.Text>The dog is this color {pup.color}</Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <DropdownButton id="dropdown-basic-button" title="Go Somewhere">
+            <Dropdown.Item
+              onClick={goHere}
+              value="somewhereDefault"
+            ></Dropdown.Item>
+            <Dropdown.Item onClick={goHere} value="someForest">
+              Another action
+            </Dropdown.Item>
+            <Dropdown.Item id="somewhere2" onClick={goHere} value="somewhere3">
+              Something else
+            </Dropdown.Item>
+            <Dropdown.Divider />
+            <Dropdown.Header>
+              *Sending Dog home will delete information from Firebase Database
+            </Dropdown.Header>
+            <Dropdown.Item onClick={deletePup}>Go Home!</Dropdown.Item>
+          </DropdownButton>
         </Card.Body>
       </Card>
-      {/* <Stack direction="horizontal" gap={3}>
-        <Button
-          className={pup.complete ? "" : "d-none"}
-          onClick={completePup}
-          variant="success"
-        >
-          <FontAwesomeIcon icon="kiwi-bird" />
-          Complete
-        </Button>
-        <Button
-          variant="danger"
-          className={pup.complete ? "d-none" : ""}
-          onClick={completePup}
-        >
-          <FontAwesomeIcon icon="carrot" />
-          Need to buy
-        </Button>
-        <div className="vr" />
-        <Button variant="outline-danger" onClick={deletePup}>
-          Delete
-        </Button>
-      </Stack> */}
     </div>
   );
 }
