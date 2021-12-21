@@ -29,42 +29,37 @@
   background-color: white;
 }
 #someBeach {
-  /* background-color: blue; */
-  opacity: 0.8;
-
+  color: white;
+  font-weight: bold;
   background-image: url(../../images/beach.jpg);
 }
 #someCamping {
-  opacity: 0.8;
-  /* background-color: green; */
+  color: white;
+  font-weight: bold;
   background-image: url(../../images/campingClip.jpg);
 }
 #someDayForest {
-  /* background-color: green; */
-  opacity: 0.8;
-
+  color: white;
+  font-weight: bold;
   background-image: url(../../images/daytimeForestClip.jpg);
 }
 #someSunsetForest {
-  /* background-color: green; */
-  opacity: 0.8;
+  color: white;
+  font-weight: bold;
   background-image: url(../../images/sunsetForestClip.jpg);
 }
 #someSpace {
   color: white;
   font-weight: bold;
-  /* background-color: green; */
   background-image: url(../../images/space.jpg);
 }
 #someWinter {
-  opacity: 0.8;
-
-  /* background-color: green; */
+  color: white;
+  font-weight: bold;
   background-image: url(../../images/winter.jpg);
 }
 #someWoods {
-  opacity: 0.8;
-
-  /* background-color: green; */
+  color: white;
+  font-weight: bold;
   background-image: url(../../images/woods.jpg);
 }

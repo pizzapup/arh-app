@@ -29,7 +29,7 @@ function FormComp() {
       <Form>
         <Row className="flex-sm-row-reverse">
           <Col sm={12} md={6} className="align-self-center">
-            <DogIcon fill={color} />
+            <DogIcon fill={color} className="floating" />
           </Col>
           <Col sm={12} md={6} className="align-self-center">
             <Row>

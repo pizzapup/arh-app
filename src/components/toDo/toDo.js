@@ -16,6 +16,7 @@ import {
 } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DogIcon from "../../images/dog";
+import DropDownComp from "../dropDownComp/dropDownComp";
 
 function Pup({ pup }) {
   const goHere = (e) => {
@@ -36,39 +37,10 @@ function Pup({ pup }) {
         style={{ width: "18rem" }}
       >
         <DogIcon fill={pup.color} />
-        <Card.Body>
+        <Card.Body className="pupCardText">
           <Card.Title>{pup.name}</Card.Title>
           <Card.Text>The dog is this color {pup.color}</Card.Text>
-          <DropdownButton id="dropdown-basic-button" title="Go Somewhere">
-            <Button onClick={goHere} value="somewhereDefault">
-              Nowhere
-            </Button>
-
-            <Button onClick={goHere} value="someSpace">
-              Space <FontAwesomeIcon icon="rocket" />
-            </Button>
-
-            <Button onClick={goHere} value="someWinter">
-              Winter
-              <FontAwesomeIcon icon="snowflake" />
-            </Button>
-
-            <Button onClick={goHere} value="someBeach">
-              Beach
-              <FontAwesomeIcon icon="umbrella-beach" />
-            </Button>
-
-            <Button onClick={goHere} value="someDayForest">
-              Forest
-              <FontAwesomeIcon icon="tree" />
-            </Button>
-
-            <Dropdown.Divider />
-            <Dropdown.Header>
-              *Sending Dog home will delete information from Firebase Database
-            </Dropdown.Header>
-            <Dropdown.Item onClick={deletePup}>Go Home!</Dropdown.Item>
-          </DropdownButton>
+          <DropDownComp />
         </Card.Body>
       </Card>
     </div>
