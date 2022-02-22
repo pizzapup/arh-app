@@ -1,23 +1,13 @@
-# arh-app
-
-CRUD SPA featuring a form on a styled, responsive website built with React, Bootstrap, and hosted on Firebase.
-<!--12/19/21 styling removed and will be applied after form is completed -->
+# Application Overview (arh-app)
+This application implements a RESTFUL backend API for securely storing and retrieving data in a NoSQL database via AJAX calls. The purpose of creating this app was to examine the techniques used in multimedia applications to communicate with back-end data and information services, and to create applications with run-time access to data, information, and media assets. This is a CRUD SPA featuring a form on a styled, responsive website built with React, Bootstrap, and Firebase. SVGs designed for this application were created using adobe illustrator, procreate, svgsprit.es, and SVGR.
 
 ## Firebase URL: <https://arh-final.web.app/>
 
-### Navigation
+### Application form creates an object ("dog") from user input data and stores the information in a database (Firebase). All objects are updated and displayed on the page ("cards")
 
-Application uses react-route-dom route and switch to display content
-<!-- 12/17/21 disabled until content is corrected -->
-### Form
+ ##### Create Object: User input consists of text, color, and submit. Color selector updates "preview" dog color as user selects colors. Submitting the form ("Add to list") sends the name property (text input) and color property (color input) to Firebase database along with the property "somewhere" set to its default value. 
+ ##### Display (Read): Objects are displayed styled with bootstrap cards. The "color" property sets the card SVG ("dog") color and also displays as hexidecimal value on the card.  
+##### Update Object Background: The "somewhere" property determines the background image for the dog "card." Default value displays no background image. User can update the somewhere property by using the "Go Somewhere" selector. 
+ ##### Delete Object: Setting the somewhere property to "Go Home!" will delete the object from the database  
 
-The form creates an object with user input and send the object to Firebase.
-<!-- 12/18/21 Object includes: name (text input) and color (color picker) -->
-SVG(s) created using adobe illustrator, procreate, svgsprit.es, and SVGR
-
-Objects are displayed styled with bootstrap cards.SVG(s) will be styled using the user input.
-
-Users have the option to modify (update) and/or delete the object(s) using buttons on the cards. The buttons are hidden by default and displayed only when needed.
-<!-- 12/18/21: working out whether the cards will "flip" when clicked, feature a dropdown, or display the buttons on hover -->
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+###### Please note that some features were not up to personal preference and were used in order to follow the design requirements of this application (like the use of Bootstrap styling and FontAwesome icons)
