@@ -15,14 +15,20 @@
   top: auto;
   bottom: auto;
 }
-.floating {
+.dog-icon {
   background-size: cover;
+  background-color: pink;
+  /* margin-left: 30px; */
+  /* margin-top: 5px; */
+  margin: 3em;
+  height: 50vh;
+  width: 50vh;
+}
+.floating {
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  margin-left: 30px;
-  margin-top: 5px;
 }
 
 @keyframes floating {
