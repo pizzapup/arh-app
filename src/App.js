@@ -1,57 +1,16 @@
 import "./App.css";
-import FormComp from "./components/formComp/formComp";
-import PupList from "./components/toDoList/toDoList";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import {
-  faKiwiBird,
-  faCarrot,
-  faPaintRoller,
-  faSnowflake,
-  faCampground,
-  faTree,
-  faRocket,
-  faUmbrellaBeach,
-} from "@fortawesome/free-solid-svg-icons";
-import { Container, Row, Col } from "react-bootstrap";
-import { far } from "@fortawesome/free-regular-svg-icons";
-
-library.add(
-  faKiwiBird,
-  faCarrot,
-  faPaintRoller,
-  faSnowflake,
-  faCampground,
-  faTree,
-  faRocket,
-  faUmbrellaBeach
-);
+import NavBar from "./components/NavBar/NavBar";
+import Hero from "./components/Hero/Hero";
+import CreatePup from "./components/CreatePup/CreatePup";
+import PupCard from "./components/PupCard/PupCard";
 function App() {
-  console.log(
-    "12-21-21: Working on correcting overlap problem with card buttons. "
-  );
-  console.log(
-    "12-21-21: More project info found in README at https://github.com/pizzapup/arh-app"
-  );
   return (
     <div className="App">
-      <Container>
-        <Row className="m-2">
-          <Col>
-            <h1>Name this dog:</h1>
-          </Col>
-        </Row>
-        <Row className="m-2">
-          <Col className="FormComp-wrapper">
-            <FormComp />
-          </Col>
-        </Row>
-        <Row className="m-2">
-          <Col>
-            <PupList />
-          </Col>
-        </Row>
-      </Container>
+      <NavBar />
+      <Hero />
+      <h1>Name this dog:</h1>
+      <CreatePup />
+      <PupCard />
     </div>
   );
 }
