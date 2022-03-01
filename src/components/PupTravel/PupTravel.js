@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import firebase from "../../utilities/firebase";
+import "../PupCard/PupCard.css";
 function PupTravel({ pup }) {
   const goHere = (e) => {
     const pupRef = firebase.database().ref("name-this-dog").child(pup.id);
@@ -13,16 +14,17 @@ function PupTravel({ pup }) {
     pupRef.remove();
   };
   return (
-    <div className="PupTravel">
-      <div>
-        <button onClick={goHere} value="somewhereDefault">
-          Go Here
-        </button>
-        <div>
-          *Sending Dog home will delete information from Firebase Database
-          <button onClick={deletePup}>Go Home!</button>
-        </div>
-      </div>
+    <div className="PupTravel card-travel-section">
+      <button
+        className="pup-button travel-button"
+        onClick={goHere}
+        value="somewhereDefault"
+      >
+        Go Here
+      </button>
+      <button className="pup-button travel-button" onClick={deletePup}>
+        Go Home!
+      </button>
     </div>
   );
 }
