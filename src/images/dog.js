@@ -1,4 +1,5 @@
 import * as React from "react";
+import styles from "../components/PupCard/PupCard.css";
 
 function DogIcon(props) {
   return (
@@ -9,6 +10,8 @@ function DogIcon(props) {
       viewBox="0 0 640 480"
       xmlSpace="preserve"
       {...props}
+      // className="dog-icon"
+      className={props.className}
     >
       <style>{".prefix__st0{fill:#}"}</style>
       <path
