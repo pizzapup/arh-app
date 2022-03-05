@@ -1,26 +1,25 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
+import React from "react";
 import firebase from "../../utilities/firebase";
-import Pup from "../CreatePup/CreatePup";
 import styles from "./PupCard.css";
-function PupCard() {
-  const [pupCard, setPupCard] = useState();
-  useEffect(() => {
-    const pupRef = firebase.database().ref("name-this-dog");
-    pupRef.on("value", (snapshot) => {
-      const pups = snapshot.val();
-      const pupCard = [];
-      for (let id in pups) {
-        pupCard.push({ id, ...pups[id] });
-      }
-      setPupCard(pupCard);
-    });
-  }, []);
+import PupTravel from "../PupTravel/PupTravel";
+import DogIcon from "../../images/dog";
+import { Container, Card, Button } from "react-bootstrap";
+
+function PupCard({ pup }) {
+  // toDo
   return (
-    <div className="pup-card-holder">
-      {pupCard
-        ? pupCard.map((pup, index) => <Pup pup={pup} key={index} />)
-        : ""}
+    <div className="pup-card">
+      <div className="pup-card-background" id={pup.background}>
+        <DogIcon fill={pup.color} class-name="dog-icon card-svg}" />
+        <div className="pup-card-text">
+          <div className="pup-card-title">{pup.name}</div>
+          <div>
+            {pup.name} is this color: {pup.color}
+          </div>
+          <PupTravel pup={pup} />
+        </div>
+      </div>
     </div>
   );
 }
