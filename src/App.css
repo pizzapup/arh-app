@@ -28,6 +28,8 @@ button {
   background: none;
 }
 .btn-custom-dark {
+  width: 100%;
+
   display: inline-block;
   outline: 0;
   cursor: pointer;
