@@ -2,8 +2,9 @@
 import React from "react";
 import firebase from "../../utilities/firebase";
 import styles from "./PupCard.css";
-import DogIcon from "../../images/DogIcon/DogIcon";
 import PupTravel from "../PupTravel/PupTravel";
+import DogIcon from "../../images/dog";
+import { Container, Card, Button } from "react-bootstrap";
 
 function PupCard({ pup }) {
   // toDo
