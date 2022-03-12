@@ -1,6 +1,6 @@
 import * as React from "react";
 // import { useState } from "react";
-import "../screens/FormScreens/FormScreens.css";
+import "../screens/FormComp/FormScreens.css";
 function DogIcon(props) {
   return (
     <div className="svgBox">

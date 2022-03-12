@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import "./FormScreens.css";
+import FormStart from "./FormStart";
 import FormName from "./FormName";
 import FormColor from "./FormColor";
 import FormSubmit from "./FormSubmit";
 import firebase from "../../utilities/firebase";
-import PupGallery from "../../components/PupGallery/PupGallery";
-import FormStart from "./FormStart";
+import PupGallery from "../PupGallery/PupGallery";
 function FormHome() {
   const [step, setStep] = useState(1);
   const next = () => {

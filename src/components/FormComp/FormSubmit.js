@@ -3,7 +3,6 @@ import React from "react";
 import firebase from "../../utilities/firebase";
 import DogIcon from "../../images/dog";
 
-// import PupGallery from "../../components/PupGallery/PupGallery";
 
 function FormSubmit(props) {
   const formSubmit = () => {
@@ -15,19 +14,6 @@ function FormSubmit(props) {
     pupRef.push(pup);
   };
 
-  const config = {
-    angle: 90,
-    spread: 360,
-    startVelocity: "19",
-    elementCount: 70,
-    dragFriction: 0.12,
-    duration: "4680",
-    stagger: 3,
-    width: "10px",
-    height: "10px",
-    perspective: "500px",
-    colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
-  };
 
   return (
     <>
