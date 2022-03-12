@@ -28,6 +28,7 @@ function FormName(props) {
                 onChange={handleLocalChange}
                 value={localValue}
                 placeholder="enter dog name :)"
+                required
               />
             </label>
           </div>
