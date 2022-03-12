@@ -35,9 +35,6 @@ function FormName(props) {
               />
             </FloatingLabel>
           </div>
-          <button className="btn-custom-dark btn-right" onClick={props.back}>
-            BACK
-          </button>
           <button
             className="btn-custom-dark btn-left"
             onClick={handleNextClick}
@@ -45,9 +42,9 @@ function FormName(props) {
             NEXT
           </button>
         </div>
-        <div className="preview-container">
-          <DogIcon />
-        </div>
+      </div>
+      <div className="preview-container">
+        <DogIcon />
       </div>
     </div>
   );

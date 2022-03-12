@@ -1,7 +1,7 @@
 import { React } from "react";
 import "./FormScreens.css";
 import "../../App.css";
-import DogIcon from "../../images/dog";
+// import DogIcon from "../../images/dog";
 import OutlineArtista from "../../images/outlineArtista/OutlineArtista";
 function FormStart(props) {
   return (

@@ -4,7 +4,7 @@
 /* 1200 large devices */
 @media only screen and (max-width: 800px) {
   .pup-card {
-    background-color: lightblue;
+    /* background-color: lightblue; */
   }
 }
 .pup-card-text {

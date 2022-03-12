@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal";
 
 function FormColor(props) {
   const handleNextClick = () => {
-    alert(`whoohoo! Welcome to the pack: ${localValue} !`);
+    alert(`Nice! Looking good in the color ${localValue} !`);
 
     props.handleDogColorChange(localValue);
   };
@@ -22,7 +22,7 @@ function FormColor(props) {
           <div className="form-subtitle txt-md">
             What color should {props.dogName} be?
           </div>
-          <div className="form-text txt-rg">get inspired!</div>
+          {/* <div className="form-text txt-rg">get inspired!</div> */}
           <div className="form-main-content txt-rg">
             <div className="input-container">
               <div className="display-content">Color: {localValue}</div>

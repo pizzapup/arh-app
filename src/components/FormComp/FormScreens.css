@@ -1,3 +1,60 @@
+@media only screen and (max-width: 800px) {
+  * {
+    margin: 0 auto !important;
+  }
+  .form-comp {
+    margin-left: 10px !important;
+    width: 100% !important;
+    flex-direction: column-reverse !important;
+  }
+  .preview-container,
+  .form-container {
+    width: 100% !important;
+
+    justify-content: space-around !important;
+    align-items: center !important;
+  }
+  .preview-container {
+    margin: 0 auto !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  button {
+    font-size: small;
+    height: 44px !important;
+    width: 80px !important;
+  }
+  .form-main-content {
+    width: 100% !important;
+    /* align-items: flex-start !important; */
+    text-align: left !important;
+  }
+  * {
+    padding: 0px !important;
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .form-title,
+  .txt-lg {
+    /* font-size: 1em; */
+    font-size: larger !important;
+  }
+  .txt-md {
+    font-size: large !important;
+  }
+  .form-container,
+  .form-main-content {
+    /* width: 100vw !important; */
+    /* justify-content: space-around !important; */
+    /* align-items: flex-start !important; */
+  }
+  input[type="color"] {
+    width: 80px !important;
+    height: 80px !important;
+    /* border-radius: 50%; */
+  }
+}
 /* entire component */
 .form-comp {
   /* background-color: aliceblue; */
@@ -12,6 +69,7 @@ button {
   width: 100px;
   height: 40px;
   cursor: pointer;
+  text-transform: uppercase;
 }
 .form-container {
   width: 100%;
@@ -58,12 +116,21 @@ button {
   justify-content: space-around;
   align-items: flex-start;
 }
+input[type="color"] {
+  width: 20vw;
+  height: 20vh;
+  border: none;
+  /* border-radius: 50%; */
+}
 /* name and color forms only */
 .input-container {
   display: flex;
   flex-direction: column;
 }
-
+.submit-btn {
+  margin-top: 20px;
+  width: 20vw;
+}
 /* titles and headings */
 .form-title {
   display: flex;
@@ -83,10 +150,15 @@ button {
 }
 .submit-content-div {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  font-size: large;
 }
 /* svg preview */
 .preview-container {
-  width: 70%;
+  /* width: 70%; */
+  width: 50vw;
   position: relative;
   /* transform: translate(-50%, -50%); */
 }
