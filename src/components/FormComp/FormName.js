@@ -14,60 +14,42 @@ function FormName(props) {
     props.handleDogNameChange(localValue);
   };
   return (
-    <>
-      <div className="form-comp">
-        <div className="form-container">
-          <div className="form-title txt-lg">NAME THIS DOG</div>
-          <div className="form-subtitle txt-md">
-            Time to name your new friend
+    <div className="form-comp">
+      <div className="form-container">
+        <div className="form-title txt-lg">NAME THIS DOG</div>
+        <div className="form-subtitle txt-md">Time to name your new friend</div>
+        <div className="form-text txt-rg">make it a fun one!</div>
+        <div className="form-main-content txt-rg">
+          <div className="input-container">
+            <div className="display-content">Name: {localValue}</div>
+            <FloatingLabel
+              controlId="floatingTextarea"
+              label="dog name"
+              className="mb-3"
+            >
+              <Form.Control
+                placeholder="enter dog name here :)"
+                type="text"
+                onChange={handleLocalChange}
+                value={localValue}
+              />
+            </FloatingLabel>
           </div>
-          <div className="form-text txt-rg">make it a fun one!</div>
-          <div className="form-main-content txt-rg">
-            <div className="input-container">
-              <div className="display-content">Name: {localValue}</div>
-              <FloatingLabel
-                controlId="floatingTextarea"
-                label="enter dog name here :)"
-                className="mb-3"
-              >
-                <Form.Control
-                  placeholder="enter dog name here :)"
-                  // type="text"
-                  onChange={handleLocalChange}
-                  value={localValue}
-                />
-              </FloatingLabel>
-              {/* <label className="dog name input">
-                <input
-                  type="text"
-                  onChange={handleLocalChange}
-                  value={localValue}
-                  placeholder="enter dog name :)"
-                  required
-                />
-              </label> */}
-            </div>
-            <div className="btn-container">
-              <button
-                className="btn-custom-dark btn-right"
-                onClick={props.back}
-              >
-                &laquo; BACK
-              </button>
-              <button
-                className="btn-custom-dark btn-left"
-                onClick={handleNextClick}
-              >
-                NEXT &raquo;
-              </button>
-            </div>
-          </div>
+          <button className="btn-custom-dark btn-right" onClick={props.back}>
+            BACK
+          </button>
+          <button
+            className="btn-custom-dark btn-left"
+            onClick={handleNextClick}
+          >
+            NEXT
+          </button>
         </div>
         <div className="preview-container">
           <DogIcon />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
