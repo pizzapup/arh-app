@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "name-this-dog"
-  }
+    "default": "name-this-dog",
+    "name-this-dog-alias": "name-this-dog"
+  },
+  "targets": {}
 }
