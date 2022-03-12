@@ -1,15 +1,12 @@
 import "./App.css";
+import "./components/Animations/CSS3Animations.css";
 import NavBar from "./components/NavBar/NavBar";
-// import Hero from "./components/Hero/Hero";
-import CreatePup from "./components/CreatePup/CreatePup";
-import PupGallery from "./components/PupGallery/PupGallery";
+import FormHome from "./components/FormComp/FormHome";
 function App() {
   return (
     <div className="App">
       <NavBar />
-      {/* <Hero /> */}
-      <CreatePup />
-      <PupGallery />
+      <FormHome />
     </div>
   );
 }

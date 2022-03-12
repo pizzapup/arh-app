@@ -11,11 +11,11 @@ function PupCard({ pup }) {
   return (
     <div className="pup-card">
       <div className="pup-card-background" id={pup.background}>
-        <DogIcon fill={pup.color} class-name="dog-icon card-svg}" />
+        <DogIcon fill={pup.dogColor} class-name="dog-icon card-svg}" />
         <div className="pup-card-text">
-          <div className="pup-card-title">{pup.name}</div>
+          <div className="pup-card-title">{pup.dogName}</div>
           <div>
-            {pup.name} is this color: {pup.color}
+            {pup.dogName} is this color: {pup.dogColor}
           </div>
           <PupTravel pup={pup} />
         </div>

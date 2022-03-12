@@ -1,4 +1,5 @@
-# Application Overview ([arh-app](https://arh-final.web.app))
+# check out [THIS SITE](https://name-this-dog.web.app/) to see new updates and features! 2022
+## Application Overview ([arh-app](https://arh-final.web.app))
 This application implements a RESTFUL backend API for securely storing and retrieving data in a NoSQL database via AJAX calls. The purpose of creating this app was to examine the techniques used in multimedia applications to communicate with back-end data and information services, and to create applications with run-time access to data, information, and media assets. This is a CRUD SPA featuring a form on a styled, responsive website built with React, Bootstrap, and Firebase. SVGs designed for this application were created using adobe illustrator, procreate, svgsprit.es, and SVGR. 
 >
 Application form creates an object ("dog") from user input data and stores the information in a database (Firebase). All objects are updated and displayed on the page ("cards")
