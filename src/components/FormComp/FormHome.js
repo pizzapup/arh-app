@@ -7,6 +7,8 @@ import FormColor from "./FormColor";
 import FormSubmit from "./FormSubmit";
 import firebase from "../../utilities/firebase";
 import PupGallery from "../PupGallery/PupGallery";
+import { Fade, Bounce } from "react-awesome-reveal";
+
 function FormHome() {
   const [step, setStep] = useState(1);
   const next = () => {
@@ -39,7 +41,11 @@ function FormHome() {
   };
   switch (step) {
     case 1:
-      return <FormStart next={next} />;
+      return (
+        <Fade>
+          <FormStart next={next} />
+        </Fade>
+      );
 
     case 2:
       return (

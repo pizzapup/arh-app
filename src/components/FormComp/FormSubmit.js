@@ -1,9 +1,8 @@
 import "./FormScreens.css";
-import React from "react";
+import { React, useState } from "react";
 import firebase from "../../utilities/firebase";
 import DogIcon from "../../images/dog";
-
-
+import { Fade } from "react-awesome-reveal";
 function FormSubmit(props) {
   const formSubmit = () => {
     const pupRef = firebase.database().ref("name-this-dog");
@@ -13,7 +12,6 @@ function FormSubmit(props) {
     };
     pupRef.push(pup);
   };
-
 
   return (
     <>

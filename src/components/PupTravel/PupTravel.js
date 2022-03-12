@@ -47,7 +47,7 @@ function PupTravel({ pup }) {
       <Button
         variant="secondary"
         size="sm"
-        className="btn-sm"
+        className="btn-sm "
         bsPrefix="btn-custom-dark btn-travel"
         onClick={deletePup}
       >
