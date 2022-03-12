@@ -24,8 +24,6 @@ button {
   background: none;
 }
 .btn-custom-dark {
-  width: 100%;
-
   display: inline-block;
   outline: 0;
   cursor: pointer;
@@ -33,10 +31,8 @@ button {
   border-radius: 3px;
   color: #fff;
   background: #000;
-  font-size: 20px;
   font-weight: 600;
   line-height: 28px;
-  padding: 12px 20px;
   text-align: center;
   transition-duration: 0.15s;
   transition-property: all;
@@ -55,9 +51,7 @@ button {
   border-radius: 3px;
   color: #000;
   background: #fff;
-  font-size: 20px;
   font-weight: 600;
-  line-height: 28px;
   padding: 12px 20px;
   text-align: center;
   transition-duration: 0.15s;

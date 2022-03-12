@@ -1,5 +1,12 @@
-import { Navbar, NavDropdown, Nav, Container } from "react-bootstrap";
+import {
+  Navbar,
+  NavDropdown,
+  Nav,
+  Container,
+  NavLink as Link,
+} from "react-bootstrap";
 import "./NavBar.css";
+// import Home from "../../screens/FormStart";
 function NavBar() {
   return (
     <Navbar className="navbar-bg" collapseOnSelect expand="lg">
