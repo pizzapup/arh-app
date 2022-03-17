@@ -8,8 +8,8 @@ function OutlineArtista(props) {
       y="0px"
       viewBox="0 0 612 792"
       {...props}
-      //   width="612"
-      //   height="792"
+      width="612"
+      height="792"
     >
       <g>
         <g>

@@ -9,6 +9,7 @@ function DogIcon(props) {
         y={0}
         viewBox="0 0 640 480"
         xmlSpace="preserve"
+        // width="500"
         {...props}
       >
         {/* <style>{".prefix__st0{fill:#}"}</style> */}
