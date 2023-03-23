@@ -20,6 +20,7 @@ function PupGallery() {
   }, []);
   return (
     <div className="grid-comp">
+      hello
       <div className="pup-gallery grid-container">
         {pupGallery
           ? pupGallery.map((pup, index) => (

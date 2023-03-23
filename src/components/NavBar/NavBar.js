@@ -1,10 +1,5 @@
-import {
-  Navbar,
-  NavDropdown,
-  Nav,
-  Container,
-  NavLink as Link,
-} from "react-bootstrap";
+import { Navbar, NavDropdown, Nav, Container } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 // import Home from "../../screens/FormStart";
 function NavBar() {
@@ -15,8 +10,8 @@ function NavBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="https://name-this-dog.web.app/">home</Nav.Link>
-            <Nav.Link href="#gallery">gallery</Nav.Link>
+            <NavLink href="/home">home</NavLink>
+            {/* <NavLink href="/PupGallery">gallery</NavLink> */}
           </Nav>
           <Nav>
             <NavDropdown title="userName" id="collasible-nav-dropdown">
