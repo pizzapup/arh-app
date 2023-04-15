@@ -13,6 +13,10 @@ Navigate This README:
       - [Delete](#delete)
     - [App Update!](#app-update)
 
+  <img src="NTD-original.png" alt="Original, Functional Site" width="300"/>
+  <img src="start.png" alt="WIP updated site design" width="300"/>
+
+
 ## Application Overview
 
 Name This Dog! is a custom dog generator that allows users to input a name and color to create their own dog post. Posts are displayed realtime in the gallery. Once in the gallery, the dogs can be "sent" somewhere (updating their backgrounds) by using the drop down input on the post cards. Sending the dog "home" will remove the dog from the gallery and database and send the dog safely and happily back home. 
