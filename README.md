@@ -1,3 +1,7 @@
+<strong>UPDATE:</strong> new repository at [github.com/pizzapup.custom-dog-generator](https://github.com/pizzapup/custom-dog-generator). 
+
+The name-this-dog repository is from my early days of web dev.. aka the code in this repository is <em>scary unorganized</em>.
+___ 
 # Name This Dog !
 
 Navigate This README:
